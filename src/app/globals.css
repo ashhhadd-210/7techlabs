@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: #F4EFE5;
+  color: #1F1B16;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #06241B;
+  color: #F5F1E8;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #EBE4D2;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(31, 27, 22, 0.18);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(154, 123, 63, 0.6);
+}
+
+@layer utilities {
+  /* Architectural grid — fine, restrained, never decorative. */
+  .grid-mesh {
+    background-image:
+      linear-gradient(to right, rgba(31, 27, 22, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(31, 27, 22, 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+    background-position: -1px -1px;
+  }
+
+  .grid-mesh-on-dark {
+    background-image:
+      linear-gradient(to right, rgba(245, 241, 232, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(245, 241, 232, 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
