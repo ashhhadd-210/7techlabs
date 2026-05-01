@@ -18,13 +18,13 @@ export function SolutionCard({ index, slug, title, oneLine, examples = [] }: Pro
       <motion.div
         initial={{ opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: index * 0.04 }}
-        whileHover={{ y: -2 }}
-        className="relative h-full bg-paper border border-rule hover:border-brass hover:bg-paper p-7 lg:p-8 transition-colors duration-300"
+        transition={{ duration: 0.5, delay: index * 0.05, ease: [0.32, 0.72, 0, 1] }}
+        whileHover={{ y: -3 }}
+        className="relative h-full bg-paper border border-rule hover:border-brass p-7 lg:p-8 transition-colors duration-500 ease-editorial"
       >
         {/* brass corner ticks on hover — architectural detail */}
-        <span className="absolute top-0 left-0 h-3 w-px bg-brass opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden />
-        <span className="absolute top-0 left-0 w-3 h-px bg-brass opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden />
+        <span className="absolute top-0 left-0 h-3 w-px bg-brass opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-editorial" aria-hidden />
+        <span className="absolute top-0 left-0 w-3 h-px bg-brass opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-editorial" aria-hidden />
 
         <div className="flex items-start justify-between gap-4">
           <div className="font-mono text-[11px] tracking-widest text-brass uppercase">
@@ -32,7 +32,7 @@ export function SolutionCard({ index, slug, title, oneLine, examples = [] }: Pro
           </div>
           <ArrowUpRight
             size={18}
-            className="text-ink-mute group-hover:text-brass group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"
+            className="text-ink-mute group-hover:text-brass group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all duration-500 ease-editorial"
           />
         </div>
 

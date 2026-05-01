@@ -11,7 +11,7 @@ export function SelectedWork({ limit }: { limit?: number }) {
         <Link
           key={it.title}
           href="/work"
-          className="group bg-paper p-7 lg:p-8 hover:bg-canvas transition-colors"
+          className="group bg-paper p-7 lg:p-8 hover:bg-canvas transition-colors duration-500 ease-editorial"
         >
           <div className="flex items-start justify-between gap-4">
             <div className="font-mono text-[11px] tracking-widest text-brass uppercase">
@@ -19,7 +19,7 @@ export function SelectedWork({ limit }: { limit?: number }) {
             </div>
             <ArrowUpRight
               size={16}
-              className="text-ink-mute group-hover:text-brass group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"
+              className="text-ink-mute group-hover:text-brass group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all duration-500 ease-editorial"
             />
           </div>
           <h3 className="mt-8 text-xl md:text-2xl font-medium tracking-editorial text-ink leading-snug">

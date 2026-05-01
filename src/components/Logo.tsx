@@ -20,7 +20,7 @@ export function Logo({ tone = 'on-light', size = 'sm', className = '' }: Props) 
 
   return (
     <span
-      className={`inline-flex items-baseline font-sans font-medium tracking-tight leading-none ${sizeMap[size]} ${className}`}
+      className={`inline-flex items-baseline font-sans font-medium tracking-tight leading-none transition-opacity duration-500 ease-editorial group-hover:opacity-80 ${sizeMap[size]} ${className}`}
       aria-label="7TechLabs"
     >
       <span className="text-brass">7</span>

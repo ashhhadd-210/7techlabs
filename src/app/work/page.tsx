@@ -1,4 +1,3 @@
-import { PageTransition } from '@/components/PageTransition';
 import { GridBackground } from '@/components/GridBackground';
 import { SelectedWork } from '@/components/SelectedWork';
 import { CTAStrip } from '@/components/CTAStrip';
@@ -11,7 +10,7 @@ export const metadata = {
 
 export default function WorkPage() {
   return (
-    <PageTransition>
+    <>
       <section className="relative overflow-hidden border-b border-rule">
         <GridBackground fade="bottom" />
         <div className="absolute left-6 lg:left-10 top-32 h-[2px] w-12 bg-brass" aria-hidden />
@@ -56,6 +55,6 @@ export default function WorkPage() {
         title="Have a project in mind?"
         body="Tell us a little about it — what the system needs to do and who needs to use it. We will respond with whether we are the right team and what we would propose next."
       />
-    </PageTransition>
+    </>
   );
 }

@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, ArrowRight, Check } from 'lucide-react';
 import { solutions } from '@/data/solutions';
-import { PageTransition } from '@/components/PageTransition';
 import { GridBackground } from '@/components/GridBackground';
 import { SectionHeading } from '@/components/SectionHeading';
 import { CTAStrip } from '@/components/CTAStrip';
@@ -33,7 +32,7 @@ export default async function SolutionPage({ params }: { params: Promise<Params>
     .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
   return (
-    <PageTransition>
+    <>
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-rule">
         <GridBackground fade="bottom" />
@@ -246,6 +245,6 @@ export default async function SolutionPage({ params }: { params: Promise<Params>
         title={`Ready to build a ${sol.title.toLowerCase()} engagement?`}
         body="Send a short brief — what the system has to do, who uses it, and what success looks like. We will respond with whether we are the right team and what the next step looks like."
       />
-    </PageTransition>
+    </>
   );
 }

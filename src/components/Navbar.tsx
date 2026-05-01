@@ -19,7 +19,7 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-canvas/85 border-b border-rule">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 h-20 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-10 h-20 flex items-center justify-between">
         <Link href="/" aria-label="7TechLabs home" className="group">
           <Logo tone="on-light" size="sm" />
         </Link>
@@ -31,7 +31,7 @@ export function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className={`relative text-sm transition-colors ${
+                className={`relative text-sm transition-colors duration-300 ease-editorial ${
                   active ? 'text-ink' : 'text-ink-secondary hover:text-ink'
                 }`}
               >
@@ -47,7 +47,7 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="/contact"
-            className="text-xs font-mono tracking-widest uppercase text-cream bg-bottle hover:bg-bottle-deep px-4 py-2.5 transition-colors"
+            className="inline-flex items-center min-h-[44px] text-xs font-mono tracking-widest uppercase text-cream bg-bottle hover:bg-bottle-deep px-5 py-3 transition-colors duration-500 ease-editorial"
           >
             Start a project
           </Link>
@@ -77,7 +77,7 @@ export function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="mt-2 inline-flex w-fit text-xs font-mono tracking-widest uppercase text-cream bg-bottle px-4 py-2.5"
+              className="mt-2 inline-flex w-fit items-center min-h-[44px] text-xs font-mono tracking-widest uppercase text-cream bg-bottle hover:bg-bottle-deep px-5 py-3 transition-colors duration-500 ease-editorial"
               onClick={() => setOpen(false)}
             >
               Start a project

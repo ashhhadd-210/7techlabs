@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { ArrowRight, Mail, Globe, MapPin } from 'lucide-react';
-import { PageTransition } from '@/components/PageTransition';
 import { GridBackground } from '@/components/GridBackground';
 
 export const metadata = {
@@ -10,7 +9,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <PageTransition>
+    <>
       <section className="relative overflow-hidden border-b border-rule">
         <GridBackground fade="bottom" />
         <div className="absolute left-6 lg:left-10 top-32 h-[2px] w-12 bg-brass" aria-hidden />
@@ -35,13 +34,13 @@ export default function ContactPage() {
       <section className="mx-auto max-w-5xl px-6 lg:px-10 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-rule">
           <a
-            href="mailto:hello@7techlabs.io"
+            href="mailto:contact@7techlabs.com"
             className="group bg-paper hover:bg-canvas p-8 transition-colors flex items-start gap-5"
           >
             <Mail size={20} className="text-brass mt-1 shrink-0" />
             <div className="flex-1">
               <div className="font-mono text-[11px] tracking-widest text-brass uppercase">Email</div>
-              <div className="mt-3 text-xl font-medium text-ink">hello@7techlabs.io</div>
+              <div className="mt-3 text-xl font-medium text-ink">contact@7techlabs.com</div>
               <div className="mt-2 text-sm text-ink-secondary leading-relaxed">
                 Direct line to the team. Expect a reply within two business days.
               </div>
@@ -83,6 +82,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </PageTransition>
+    </>
   );
 }

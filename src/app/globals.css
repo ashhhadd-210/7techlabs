@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem; /* keeps anchors clear of the fixed 80px navbar */
+  -webkit-text-size-adjust: 100%; /* prevent iOS auto-zoom of small text */
+}
+
 html,
 body {
   background-color: #F4EFE5;
@@ -9,6 +15,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden; /* safety against any rogue horizontal scroll on mobile */
 }
 
 ::selection {
@@ -28,6 +35,18 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(154, 123, 63, 0.6);
+}
+
+/* Respect users who prefer reduced motion — honour their setting fully. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @layer utilities {
@@ -52,5 +71,10 @@ body {
   }
   .text-pretty {
     text-wrap: pretty;
+  }
+
+  /* Editorial easing — used by interactive elements for a calm, premium feel. */
+  .ease-editorial {
+    transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
   }
 }

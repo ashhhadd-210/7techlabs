@@ -43,14 +43,14 @@ export function CTAStrip({
             {secondaryHref && secondaryLabel && (
               <Link
                 href={secondaryHref}
-                className="inline-flex items-center gap-2 border border-ink/30 hover:border-ink px-5 py-3 text-sm tracking-wide transition-colors text-ink"
+                className="inline-flex items-center justify-center gap-2 min-h-[48px] border border-ink/30 hover:border-ink px-5 py-3 text-sm tracking-wide transition-colors duration-500 ease-editorial text-ink"
               >
                 {secondaryLabel}
               </Link>
             )}
             <Link
               href={primaryHref}
-              className="inline-flex items-center gap-2 bg-bottle hover:bg-bottle-deep text-cream px-6 py-3 text-sm font-mono tracking-widest uppercase transition-colors"
+              className="inline-flex items-center justify-center gap-2 min-h-[48px] bg-bottle hover:bg-bottle-deep text-cream px-6 py-3 text-sm font-mono tracking-widest uppercase transition-colors duration-500 ease-editorial"
             >
               {primaryLabel} <ArrowRight size={14} />
             </Link>

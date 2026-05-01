@@ -1,6 +1,5 @@
 import { solutions } from '@/data/solutions';
 import { SolutionCard } from '@/components/SolutionCard';
-import { PageTransition } from '@/components/PageTransition';
 import { GridBackground } from '@/components/GridBackground';
 import { CTAStrip } from '@/components/CTAStrip';
 
@@ -11,7 +10,7 @@ export const metadata = {
 
 export default function SolutionsPage() {
   return (
-    <PageTransition>
+    <>
       <section className="relative overflow-hidden border-b border-rule">
         <GridBackground fade="bottom" />
         <div className="absolute left-6 lg:left-10 top-32 h-[2px] w-12 bg-brass" aria-hidden />
@@ -56,6 +55,6 @@ export default function SolutionsPage() {
         title="Not sure which category fits?"
         body="Send us a short note about what you are trying to do. We will tell you whether we can help and which approach makes sense."
       />
-    </PageTransition>
+    </>
   );
 }

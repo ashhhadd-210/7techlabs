@@ -30,8 +30,8 @@ export function Footer() {
             <div className="flex gap-6">
               <dt className="text-cream-mute w-32">Email</dt>
               <dd>
-                <a href="mailto:hello@7techlabs.io" className="hover:text-brass-soft transition-colors">
-                  hello@7techlabs.io
+                <a href="mailto:contact@7techlabs.com" className="hover:text-brass-soft transition-colors">
+                  contact@7techlabs.com
                 </a>
               </dd>
             </div>
@@ -71,7 +71,7 @@ export function Footer() {
           <div className="font-mono text-[11px] tracking-widest uppercase text-cream-mute">Engage</div>
           <Link
             href="/contact"
-            className="mt-5 inline-flex items-center text-xs font-mono tracking-widest uppercase text-bottle bg-brass hover:bg-brass-soft px-4 py-2.5 transition-colors"
+            className="mt-5 inline-flex items-center min-h-[44px] text-xs font-mono tracking-widest uppercase text-bottle bg-brass hover:bg-brass-soft px-5 py-3 transition-colors duration-500 ease-editorial"
           >
             Start a project
           </Link>

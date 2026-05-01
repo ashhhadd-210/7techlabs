@@ -1,4 +1,3 @@
-import { PageTransition } from '@/components/PageTransition';
 import { GridBackground } from '@/components/GridBackground';
 import { MetadataStrip } from '@/components/MetadataStrip';
 import { WhyChoose } from '@/components/WhyChoose';
@@ -31,7 +30,7 @@ const principles = [
 
 export default function AboutPage() {
   return (
-    <PageTransition>
+    <>
       <section className="relative overflow-hidden border-b border-rule">
         <GridBackground fade="bottom" />
         <div className="absolute left-6 lg:left-10 top-32 h-[2px] w-12 bg-brass" aria-hidden />
@@ -90,6 +89,6 @@ export default function AboutPage() {
         title="Want to see whether we are the right team?"
         body="The clearest way to find out is to send us a short brief about the work. We will respond honestly and quickly."
       />
-    </PageTransition>
+    </>
   );
 }
